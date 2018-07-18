@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TFLphy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>TFLphy</h1>
+  </header>
+
+  <main>
+    <div class="input-form">
+      <h2>Choose a tube line</h2> <!--or label in the form?-->
+      <form class="line-select">
+          <select id="tube-lines" name="tube-lines" required>
+              <option value="bakerloo" id="bakerloo-list">Bakerloo</option>
+              <option value="central">Central</option>
+              <option value="circle">Circle</option>
+              <option value="district">District</option>
+              <option value="hammersmith-and-city">Hammersmith & City</option>
+              <option value="jubilee">Jubilee</option>
+              <option value="metropolitan">Metropolitan</option>
+              <option value="northern">Northern</option>
+              <option value="piccadilly">Piccadilly</option>
+              <option value="victoria">Victoria</option>
+              <option value="waterloo-and-city">Waterloo & City</option>
+              <option value="overground">Overground</option>
+              <option value="dlr">DLR</option>
+            </select>
+            <button class="submit" id="submit" name="submit">SUBMIT ME</button>
+      </form>
+    </div>
+    <div class="api-updated">
+      <div id="line-status"></div>
+      <div id="input-gif"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p></p>
+  </footer>
+
+  <script src="logic.js"></script>
+  
+</body>
+
+</html>
