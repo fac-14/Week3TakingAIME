@@ -4,7 +4,7 @@
   "description": "Week 3 Group AIME Project TFL + Giphy API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node logic.test.js | tap-spec"
   },
   "repository": {
     "type": "git",
