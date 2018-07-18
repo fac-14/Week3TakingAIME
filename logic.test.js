@@ -413,7 +413,7 @@ test("apiRequest returns object with contents", function(t) {
   t.end();
 });
 
-test("api request returns expected object", function(t) {
+test("apiRequest returns expected object", function(t) {
   var actual = logic.apiRequest(url);
   var expected = returnedObject;
   t.equal(actual, expected, "api request returns tfl status");
