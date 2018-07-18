@@ -39,29 +39,29 @@ var apiFunctions = {
         "&api_key=dc6zaTOxFJmzC",
       "",
       function(parsedObj) {
-        console.log(parsedObj.data[0].images.downsized.url);
-        return parsedObj.data[0].images.downsized.url;
+        console.log(parsedObj.data[0].images.downsized_medium.url);
+        return parsedObj.data[0].images.downsized_medium.url;
       }
     );
   },
 
   sentimentObject: {
-    GoodService: "cat",
-    MinorDelays: "dogs",
-    ReducedService: "dogs",
-    PlannedClosure: "lambs",
-    PartClosure: "lambs",
-    SevereDelays: "sloths",
-    Suspended: "penguins",
-    PartSuspended: "penguins",
+    GoodService: "love+actually+dance",
+    MinorDelays: "friends+joey+shrug",
+    ReducedService: "friends+joey+shrug",
+    PlannedClosure: "sigh",
+    PartClosure: "sigh",
+    SevereDelays: "sloths", // todo
+    Suspended: "penguins", // todo
+    PartSuspended: "penguins", // todo
     BusService: "bus",
-    SpecialService: "shrug"
+    SpecialService: "shrug" // todo
   }
 };
 
 // see top answer: https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function
 
-// apiFunctions.getLineStatus("TfL Rail");
+apiFunctions.getLineStatus("Victoria");
 
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
