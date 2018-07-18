@@ -1,18 +1,59 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    
-</body>
-</html>
-=======
+<html lang="en">
 
->>>>>>> c1b4973ad1c6a1567c18bd494c7cbda9a7a68305
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TFLphy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>TFLphy</h1>
+  </header>
+
+  <main>
+    <div class="input-form">
+      <h2>Choose a tube line</h2> <!--or label in the form?-->
+      <form class="line-select">
+          <select id="tube-lines" name="tube-lines" required>
+              <option value="bakerloo" id="bakerloo-list">Bakerloo</option>
+              <option value="central" id="central-list">Central</option>
+              <option value="circle" id="circle-list">Circle</option>
+              <option value="district" id="district-list">District</option>
+              <option value="hammersmith-and-city" id="handc-list">Hammersmith & City</option>
+              <option value="jubilee" id="jubilee-list">Jubilee</option>
+              <option value="metropolitan" id="metro-list">Metropolitan</option>
+              <option value="northern" id="northern-list">Northern</option>
+              <option value="piccadilly" id="piccadilly-list">Piccadilly</option>
+              <option value="victoria" id="victoria-list">Victoria</option>
+              <option value="waterloo-and-city" id="wandc-list">Waterloo & City</option>
+              <option value="overground" id="overground-list">Overground</option>
+              <option value="dlr" id="dlr-list">DLR</option>
+            </select>
+            <button id="submit" name="submit">SUBMIT ME</button>
+      </form>
+    </div>
+    <div class="api-updated">
+      <div id="line-status">
+        <h3 id="line-status-text"></h3>
+      </div>
+      <div id="input-gif">
+        <img src="" alt="Probably a cute cat gif" id="giphy-gif" class="hidden-img">
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Made with the blood, sweat, and tears of Eve, Art, Emily, and Kate</p>
+  </footer>
+
+  <script src="logic.js"></script>
+  <script src="dom.js"></script>
+  
+</body>
+
+</html>
+
