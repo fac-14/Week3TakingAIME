@@ -3,8 +3,7 @@ var apiFunctions = {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.status == 200) {
-        var parsedObj = JSON.parse(xhr.responseText);
-        return parsedObj;
+        return JSON.parse(xhr.responseText);
       }
     };
     xhr.open("GET", url, true);
