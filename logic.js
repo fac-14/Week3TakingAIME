@@ -20,6 +20,7 @@ var apiFunctions = {
       function(parsedObj, lineName) {
         parsedObj.forEach(function(line) {
           if (line.name === lineName) {
+            document.getElementById("line-status-text").textContent = line.lineStatuses[0].statusSeverityDescription;
             return apiFunctions.getGif(
               line.lineStatuses[0].statusSeverityDescription
             );
@@ -36,7 +37,9 @@ var apiFunctions = {
         "&api_key=dc6zaTOxFJmzC",
       "",
       function(parsedObj) {
-        console.log(parsedObj.data[0].images.downsized.url);
+        document.getElementById("giphy-gif").src = parsedObj.data[0].images.downsized.url;
+        document.getElementById("giphy-gif").classList.remove("hidden-img");
+        document.getElementById("giphy-gif").classList.add("reveal-img");
         return parsedObj.data[0].images.downsized.url;
       }
     );
@@ -50,3 +53,8 @@ apiFunctions.getLineStatus("Northern");
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
 }
+
+// change background color depending on tube line
+
+console.log(document.getElementById("bakerloo-list").textContent);
+
