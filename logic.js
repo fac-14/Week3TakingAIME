@@ -12,10 +12,11 @@ var apiFunctions = {
     xhr.open("GET", url, true);
     xhr.send();
   },
+
   // get line status using API request
   getLineStatus: function(lineName, callback) {
     apiFunctions.apiRequest(
-      "https://api.tfl.gov.uk/line/mode/tube/status",
+      "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status",
       lineName,
       function(parsedObj, lineName) {
         parsedObj.forEach(function(line) {
@@ -29,7 +30,9 @@ var apiFunctions = {
     );
   },
 
-  getGif: function(sentiment) {
+  getGif: function(statusDescription) {
+    var sentiment =
+      apiFunctions.sentimentObject[statusDescription.split(" ").join("")];
     apiFunctions.apiRequest(
       "http://api.giphy.com/v1/gifs/search?q=" +
         sentiment +
@@ -40,12 +43,25 @@ var apiFunctions = {
         return parsedObj.data[0].images.downsized.url;
       }
     );
+  },
+
+  sentimentObject: {
+    GoodService: "cat",
+    MinorDelays: "dogs",
+    ReducedService: "dogs",
+    PlannedClosure: "lambs",
+    PartClosure: "lambs",
+    SevereDelays: "sloths",
+    Suspended: "penguins",
+    PartSuspended: "penguins",
+    BusService: "bus",
+    SpecialService: "shrug"
   }
 };
 
 // see top answer: https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function
 
-apiFunctions.getLineStatus("Northern");
+// apiFunctions.getLineStatus("TfL Rail");
 
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
