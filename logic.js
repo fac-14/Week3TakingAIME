@@ -25,12 +25,17 @@ var apiFunctions = {
       parsedObj.forEach(function(line) {
         // find the tube line chosen by the user
         if (line.name === lineName) {
+          // line status variable
+          var lineStatus = line.lineStatuses[0].statusSeverityDescription;
           // puts line status text into DOM
           document.getElementById("line-status-text").textContent =
-            line.lineStatuses[0].statusSeverityDescription;
+            lineStatus;
+          console.log(lineStatus);
+          // append emoji text
+          apiFunctions.getEmoji(lineStatus);
           // get appropriate gif
           return apiFunctions.getGif(
-            line.lineStatuses[0].statusSeverityDescription
+            lineStatus
           );
         }
       });
@@ -55,6 +60,11 @@ var apiFunctions = {
     });
   },
 
+  getEmoji: function(statusDescription) {
+    let sentiment = apiFunctions.emojiObject[statusDescription.split(" ").join("")];
+    document.getElementById("line-status-text").textContent += sentiment;
+  },
+
   // convert TfL status descriptions into search terms for GIPHY
   sentimentObject: {
     GoodService: "love+actually+dance",
@@ -67,6 +77,19 @@ var apiFunctions = {
     PartSuspended: "ouch+wall+smash",
     BusService: "bus",
     SpecialService: "drew+scanlon"
+  },
+
+  emojiObject: {
+    GoodService: " - woohoo! 🎉😍🎉",
+    MinorDelays: " - 🙄🙄🙄",
+    ReducedService: " - 🤨🤨🤨",
+    PlannedClosure: " - 😩😫😖",
+    PartClosure: " - 😩😫😖",
+    SevereDelays: " - 😬😡😭",
+    Suspended: " - 😠🤬👊",
+    PartSuspended: " - 😠🤬👊",
+    BusService: " - 🚌🚌🚌",
+    SpecialService: " - 🤔🤔🤔"
   }
 };
 
