@@ -54,7 +54,7 @@ var apiFunctions = {
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
       document.getElementById("giphy-gif").src =
-        parsedObj.data[0].images.downsized.url;
+        parsedObj.data[0].images.fixed_height.url;
       document.getElementById("giphy-gif").classList.remove("hidden-img");
       document.getElementById("giphy-gif").classList.add("reveal-img");
     });

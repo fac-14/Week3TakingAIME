@@ -7,6 +7,7 @@
   <title>TFLphy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -63,8 +64,8 @@
   </header>
 
   <main>
+    <h2>Choose a tube line</h2>
     <div class="input-form">
-      <h2>Choose a tube line</h2> <!--or label in the form?-->
       <form class="line-select" id="line-select" action="">
           <select id="tube-lines" name="tube-lines" required>
             <option value="" id="default">--</option>
@@ -83,13 +84,13 @@
             <option value="DLR" id="dlrlist">DLR</option>
             <option value="TfL Rail" id="tflraillist">TfL Rail</option>
           </select>
-          <input type="submit" name="" value="SUBMIT ME">
+          <input type="submit" name="" value="Submit!">
           <!-- <button class="submit" id="submit" name="submit" type="submit">SUBMIT ME</button> -->
       </form>
     </div>
     <div class="api-updated">
       <div id="line-status">
-        <h3 id="line-status-text" aria-live="assertive" aria-labelledby="HELLO"></h3>
+        <h3 id="line-status-text"></h3>
       </div>
       <div id="input-gif">
         <img src="" alt="A GIF related to the tube status" id="giphy-gif" class="hidden-img">
