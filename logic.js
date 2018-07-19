@@ -29,7 +29,7 @@ var apiFunctions = {
           var lineStatus = line.lineStatuses[0].statusSeverityDescription;
           // puts line status text into DOM
           document.getElementById("line-status-text").textContent =
-            lineStatus;
+            lineStatus + " on " + lineName;
           console.log(lineStatus);
           // append emoji text
           apiFunctions.getEmoji(lineStatus);
