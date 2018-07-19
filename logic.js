@@ -57,11 +57,11 @@ var apiFunctions = {
     ReducedService: "friends+joey+shrug",
     PlannedClosure: "sigh",
     PartClosure: "sigh",
-    SevereDelays: "screaming", // todo
-    Suspended: "ouch+wall+smash", // todo
-    PartSuspended: "ouch+wall+smash", // todo
+    SevereDelays: "screaming",
+    Suspended: "ouch+wall+smash",
+    PartSuspended: "ouch+wall+smash",
     BusService: "bus",
-    SpecialService: "wut+big+brother" // todo
+    SpecialService: "drew+scanlon"
   }
 };
 
