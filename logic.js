@@ -29,7 +29,7 @@ var apiFunctions = {
           var lineStatus = line.lineStatuses[0].statusSeverityDescription;
           // puts line status text into DOM
           document.getElementById("line-status-text").textContent =
-            lineStatus;
+            lineStatus + " on " + lineName;
           console.log(lineStatus);
           // append emoji text
           apiFunctions.getEmoji(lineStatus);
@@ -52,7 +52,7 @@ var apiFunctions = {
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
       document.getElementById("giphy-gif").src =
-        parsedObj.data.images.downsized.url;
+        parsedObj.data.images.fixed_height.url;
         // parsedObj.data[0].images.downsized.url; 
       document.getElementById("giphy-gif").classList.remove("hidden-img");
       document.getElementById("giphy-gif").classList.add("reveal-img");
