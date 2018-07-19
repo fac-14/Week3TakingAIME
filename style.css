@@ -119,4 +119,12 @@ margin: 4rem;
 font-size: 1.2rem;
 }
 
+svg {
+  height: 200px;
+}
+
+#tflphy-logo {
+  color: #113B92;
+  fill: currentColor;
+}
 
