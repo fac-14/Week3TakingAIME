@@ -17,23 +17,26 @@
   <main>
     <div class="input-form">
       <h2>Choose a tube line</h2> <!--or label in the form?-->
-      <form class="line-select">
+      <form class="line-select" id="line-select" action="">
           <select id="tube-lines" name="tube-lines" required>
-              <option value="bakerloo" id="bakerloo-list">Bakerloo</option>
-              <option value="central" id="central-list">Central</option>
-              <option value="circle" id="circle-list">Circle</option>
-              <option value="district" id="district-list">District</option>
-              <option value="hammersmith-and-city" id="handc-list">Hammersmith & City</option>
-              <option value="jubilee" id="jubilee-list">Jubilee</option>
-              <option value="metropolitan" id="metro-list">Metropolitan</option>
-              <option value="northern" id="northern-list">Northern</option>
-              <option value="piccadilly" id="piccadilly-list">Piccadilly</option>
-              <option value="victoria" id="victoria-list">Victoria</option>
-              <option value="waterloo-and-city" id="wandc-list">Waterloo & City</option>
-              <option value="overground" id="overground-list">Overground</option>
-              <option value="dlr" id="dlr-list">DLR</option>
-            </select>
-            <button class="submit" id="submit" name="submit">SUBMIT ME</button>
+            <option value="" id="default">--</option>
+            <option value="Bakerloo" id="bakerloo-list">Bakerloo</option>
+            <option value="Central" id="central-list">Central</option>
+            <option value="Circle" id="circle-list">Circle</option>
+            <option value="District" id="district-list">District</option>
+            <option value="Hammersmith & City" id="handc-list">Hammersmith & City</option>
+            <option value="Jubilee" id="jubilee-list">Jubilee</option>
+            <option value="Metropolitan" id="metro-list">Metropolitan</option>
+            <option value="Northern" id="northern-list">Northern</option>
+            <option value="Piccadilly" id="piccadilly-list">Piccadilly</option>
+            <option value="Victoria" id="victoria-list">Victoria</option>
+            <option value="Waterloo & City" id="wandc-list">Waterloo & City</option>
+            <option value="London Overground" id="overground-list">Overground</option>
+            <option value="DLR" id="dlr-list">DLR</option>
+            <option value="TfL Rail" id="tfl-rail-list">TfL Rail</option>
+          </select>
+          <input type="submit" name="" value="SUBMIT ME">
+          <!-- <button class="submit" id="submit" name="submit" type="submit">SUBMIT ME</button> -->
       </form>
     </div>
     <div class="api-updated">
@@ -50,8 +53,8 @@
     <p>Made with the blood, sweat, and tears of Eve, Art, Emily, and Kate</p>
   </footer>
 
-  <script src="logic.js"></script>
   <script src="dom.js"></script>
+  <script src="logic.js"></script>
 
 </body>
 

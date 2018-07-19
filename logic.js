@@ -20,7 +20,6 @@ var apiFunctions = {
     // store url for TfL API request
     let url =
       "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status";
-    console.log(url);
     // make API request to TfL
     apiFunctions.apiRequest(url, function(parsedObj) {
       parsedObj.forEach(function(line) {
@@ -73,12 +72,10 @@ var apiFunctions = {
 
 // see top answer: https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function
 
-apiFunctions.getLineStatus("Central");
-
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
 }
 
 // change background color depending on tube line
-
-console.log(document.getElementById("bakerloo-list").textContent);
+//
+// console.log(document.getElementById("bakerloo-list").textContent);
