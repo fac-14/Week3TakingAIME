@@ -105,6 +105,64 @@ input[type="submit"]:focus {
   box-shadow: none;
 }
 
+/* style dropdown-list options */
+#bakerloolist {
+  background-color: #ae6118;
+  }
+  
+  #centrallist {
+  background-color: #e41f1f;
+  color: black;
+  }
+  
+  #circlelist {
+  background-color: #f8d42d;
+  }
+  
+  #districtlist {
+  background-color: #00a575;
+  }
+  
+  #handclist {
+   background-color: #e899a8;
+  }
+  
+  #jubileelist {
+  background-color: #8f989e;
+  }
+  
+  #metrolist {
+  background-color: #893267;
+  }
+  
+  #northernlist {
+  background-color: #000;
+  }
+  
+  #piccadillylist {
+  background-color: #0450a1;
+  }
+  
+  #victorialist {
+  background-color: #009fe0;
+  }
+  
+  #wandclist {
+  background-color: #70c3ce;
+  }
+  
+  #overgroundlist {
+  background-color: #f86c00;
+  }
+
+  #dlrlist {
+    background-color: #00AFAD;
+  }
+    
+  #tflraillist {
+    background-color: #0019A8;
+  }
+
 .hidden-img {
   display: none;
 }
