@@ -25,6 +25,9 @@ var apiFunctions = {
       parsedObj.forEach(function(line) {
         // find the tube line chosen by the user
         if (line.name === lineName) {
+          // puts line status text into DOM
+          document.getElementById("line-status-text").textContent =
+            line.lineStatuses[0].statusSeverityDescription;
           // get appropriate gif
           return apiFunctions.getGif(
             line.lineStatuses[0].statusSeverityDescription
@@ -45,8 +48,10 @@ var apiFunctions = {
       "&api_key=dc6zaTOxFJmzC";
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
-      console.log(parsedObj.data[0].images.downsized_medium.url);
-      return parsedObj.data[0].images.downsized_medium.url;
+      document.getElementById("giphy-gif").src =
+        parsedObj.data[0].images.downsized.url;
+      document.getElementById("giphy-gif").classList.remove("hidden-img");
+      document.getElementById("giphy-gif").classList.add("reveal-img");
     });
   },
 
@@ -67,8 +72,12 @@ var apiFunctions = {
 
 // see top answer: https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function
 
-apiFunctions.getLineStatus("Central");
+// apiFunctions.getLineStatus("Central");
 
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
 }
+
+// change background color depending on tube line
+
+console.log(document.getElementById("bakerloo-list").textContent);
