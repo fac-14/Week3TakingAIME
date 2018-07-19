@@ -20,13 +20,13 @@ DLR rgb(0, 187, 180) #00BBB4
 
 /* FLEX BOX STYLES */
 
-body, .main, .input-form, .line-select {
+body, .main, .input-form, .line-select, .api-updated {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-h1, h2, .header, .footer {
+h1, h2, .header, .footer, #line-status, #input-gif {
   display: flex;
   justify-content: center;
 }
@@ -37,3 +37,15 @@ body {
   margin: 0;
   padding: 8% 8%;
 }
+
+/* IMAGE STYLES */
+
+.hidden-img {
+  display: none;
+}
+
+.reveal-img {
+  display: flex;
+  justify-content: center;
+}
+

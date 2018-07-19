@@ -20,33 +20,38 @@
       <form class="line-select">
           <select id="tube-lines" name="tube-lines" required>
               <option value="bakerloo" id="bakerloo-list">Bakerloo</option>
-              <option value="central">Central</option>
-              <option value="circle">Circle</option>
-              <option value="district">District</option>
-              <option value="hammersmith-and-city">Hammersmith & City</option>
-              <option value="jubilee">Jubilee</option>
-              <option value="metropolitan">Metropolitan</option>
-              <option value="northern">Northern</option>
-              <option value="piccadilly">Piccadilly</option>
-              <option value="victoria">Victoria</option>
-              <option value="waterloo-and-city">Waterloo & City</option>
-              <option value="overground">Overground</option>
-              <option value="dlr">DLR</option>
+              <option value="central" id="central-list">Central</option>
+              <option value="circle" id="circle-list">Circle</option>
+              <option value="district" id="district-list">District</option>
+              <option value="hammersmith-and-city" id="handc-list">Hammersmith & City</option>
+              <option value="jubilee" id="jubilee-list">Jubilee</option>
+              <option value="metropolitan" id="metro-list">Metropolitan</option>
+              <option value="northern" id="northern-list">Northern</option>
+              <option value="piccadilly" id="piccadilly-list">Piccadilly</option>
+              <option value="victoria" id="victoria-list">Victoria</option>
+              <option value="waterloo-and-city" id="wandc-list">Waterloo & City</option>
+              <option value="overground" id="overground-list">Overground</option>
+              <option value="dlr" id="dlr-list">DLR</option>
             </select>
             <button class="submit" id="submit" name="submit">SUBMIT ME</button>
       </form>
     </div>
     <div class="api-updated">
-      <div id="line-status"></div>
-      <div id="input-gif"></div>
+      <div id="line-status">
+        <h3 id="line-status-text"></h3>
+      </div>
+      <div id="input-gif">
+        <img src="" alt="Probably a cute cat gif" id="giphy-gif" class="hidden-img">
+      </div>
     </div>
   </main>
 
   <footer class="footer">
-    <p></p>
+    <p>Made with the blood, sweat, and tears of Eve, Art, Emily, and Kate</p>
   </footer>
 
   <script src="logic.js"></script>
+  <script src="dom.js"></script>
   
 </body>
 
