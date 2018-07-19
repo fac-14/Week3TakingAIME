@@ -1,7 +1,5 @@
 /*
-
 TUBE LINE COLOURS!
-
 Bakerloo rgb(174, 97, 24) #AE6118
 Central rgb(228, 31, 31) #E41F1F
 Circle rgb(248, 212, 45) #F8D42D
@@ -15,37 +13,110 @@ Victoria rgb(0, 159, 224) #009FE0
 W&C rgb(112, 195, 206) #70C3CE
 Overground rgb(248, 108, 0) #F86C00
 DLR rgb(0, 187, 180) #00BBB4
-
 */
 
 /* FLEX BOX STYLES */
 
 body, .main, .input-form, .line-select, .api-updated {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+display: flex;
+justify-content: center;
+flex-direction: column;
 }
 
 h1, h2, .header, .footer, #line-status, #input-gif {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 /* PADDING AND MARGIN */
 
-body {
-  margin: 0;
-  padding: 8% 8%;
+main {
+display: flex;
+justify-content: center;
+margin: 0;
+
+}
+
+.input-form{
+display: flex;
+justify-content: center;
+margin: 4rem 16rem;
+
+}
+
+#bakerloo-list {
+background-color: #ae6118;
+}
+
+#central-list {
+background-color: #e41f1f;
+color: black;
+}
+
+#circle-list {
+background-color: #f8d42d;
+}
+
+#district-list {
+background-color: #00a575;
+}
+
+#handc-list {
+background-color: #e899a8;
+}
+
+#jubilee-list {
+background-color: #8f989e;
+}
+
+#metro-list {
+background-color: #893267;
+}
+
+#northern-list {
+background-color: #000;
+}
+
+#piccadilly-list {
+background-color: #0450a1;
+}
+
+#victoria-list {
+background-color: #009fe0;
+}
+
+#wandc-list {
+background-color: #70c3ce;
+}
+
+#overground-list {
+background-color: #f86c00;
+}
+
+#dlr-list {
+background-color: #00bbb4;
+}
+
+#submit {
+height: 4rem;
+margin: 1rem 24rem;
+border-radius: 12px;
 }
 
 /* IMAGE STYLES */
 
 .hidden-img {
-  display: none;
+display: none;
 }
 
 .reveal-img {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
+
+footer {
+margin: 4rem;
+font-size: 1.2rem;
+}
+
 
