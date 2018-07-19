@@ -48,13 +48,12 @@ var apiFunctions = {
       apiFunctions.sentimentObject[statusDescription.split(" ").join("")];
     // create url for GIPHY API request with sentiment search query
     let url =
-      "http://api.giphy.com/v1/gifs/search?q=" +
-      sentiment +
-      "&api_key=dc6zaTOxFJmzC";
+      "http://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" + sentiment;
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
       document.getElementById("giphy-gif").src =
-        parsedObj.data[0].images.downsized.url;
+        parsedObj.data.images.downsized.url;
+        // parsedObj.data[0].images.downsized.url; 
       document.getElementById("giphy-gif").classList.remove("hidden-img");
       document.getElementById("giphy-gif").classList.add("reveal-img");
     });
@@ -67,16 +66,16 @@ var apiFunctions = {
 
   // convert TfL status descriptions into search terms for GIPHY
   sentimentObject: {
-    GoodService: "love+actually+dance",
-    MinorDelays: "friends+joey+shrug",
-    ReducedService: "friends+joey+shrug",
-    PlannedClosure: "sigh",
-    PartClosure: "sigh",
+    GoodService: "happy-dancing",
+    MinorDelays: "shrugging",
+    ReducedService: "shrugging",
+    PlannedClosure: "sighing",
+    PartClosure: "sighing",
     SevereDelays: "screaming",
-    Suspended: "ouch+wall+smash",
-    PartSuspended: "ouch+wall+smash",
+    Suspended: "impatient",
+    PartSuspended: "impatient",
     BusService: "bus",
-    SpecialService: "drew+scanlon"
+    SpecialService: "drew-scanlon"
   },
 
   emojiObject: {
