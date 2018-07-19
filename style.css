@@ -86,71 +86,6 @@ form > * {
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
 }
-*/
-
-.input-form{
-  margin: 4rem 16rem;
-
-}
-
-#bakerloo-list {
-background-color: #ae6118;
-}
-
-#central-list {
-background-color: #e41f1f;
-color: black;
-}
-
-#circle-list {
-background-color: #f8d42d;
-}
-
-#district-list {
-background-color: #00a575;
-}
-
-#handc-list {
- background-color: #e899a8;
-}
-
-#jubilee-list {
-background-color: #8f989e;
-}
-
-#metro-list {
-background-color: #893267;
-}
-
-#northern-list {
-background-color: #000;
-}
-
-#piccadilly-list {
-background-color: #0450a1;
-}
-
-#victoria-list {
-background-color: #009fe0;
-}
-
-#wandc-list {
-background-color: #70c3ce;
-}
-
-#overground-list {
-background-color: #f86c00;
-}
-
-#dlr-list {
-background-color: #00bbb4;
-}
-
-#submit {
-height: 4rem;
-margin: 1rem 24rem;
-border-radius: 12px;
-}
 
 input[type="submit"] {
   font-family: inherit;
@@ -170,6 +105,64 @@ input[type="submit"]:focus {
   box-shadow: none;
 }
 
+/* style dropdown-list options */
+#bakerloolist {
+  background-color: #ae6118;
+  }
+  
+  #centrallist {
+  background-color: #e41f1f;
+  color: black;
+  }
+  
+  #circlelist {
+  background-color: #f8d42d;
+  }
+  
+  #districtlist {
+  background-color: #00a575;
+  }
+  
+  #handclist {
+   background-color: #e899a8;
+  }
+  
+  #jubileelist {
+  background-color: #8f989e;
+  }
+  
+  #metrolist {
+  background-color: #893267;
+  }
+  
+  #northernlist {
+  background-color: #000;
+  }
+  
+  #piccadillylist {
+  background-color: #0450a1;
+  }
+  
+  #victorialist {
+  background-color: #009fe0;
+  }
+  
+  #wandclist {
+  background-color: #70c3ce;
+  }
+  
+  #overgroundlist {
+  background-color: #f86c00;
+  }
+
+  #dlrlist {
+    background-color: #00AFAD;
+  }
+    
+  #tflraillist {
+    background-color: #0019A8;
+  }
+
 .hidden-img {
   display: none;
 }
@@ -180,7 +173,42 @@ input[type="submit"]:focus {
   justify-content: center;
 }
 
+/* END BODY STYLING */
+
+/* START FOOTER STYLING */
+
 footer {
-  margin: 4rem;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
+  margin: 24px 32px;
+  text-align: center;
 }
+
+p {
+  margin: 0;
+}
+
+/* END FOOTER STYLING */
+
+/* START MEDIA QUERIES */
+
+@media screen and (max-width: 450px) {
+  header,
+  select,
+  input {
+    width: 80vw;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  #input-gif > img {
+    max-width: 90vw;
+  }
+}
+
+/* END EMDIA QUERIES */
