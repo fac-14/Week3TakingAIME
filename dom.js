@@ -9,6 +9,9 @@ document
     event.preventDefault();
     var line = document.getElementById("tube-lines");
     var value = line.options[line.selectedIndex].value;
+    // get selected line's id
+    var colorKey = line.options[line.selectedIndex].id;
+    document.getElementById("tflphy-logo").style.fill = apiFunctions.logoColorObject[colorKey];
     // calls getLineStatus function
     apiFunctions.getLineStatus(value);
   });

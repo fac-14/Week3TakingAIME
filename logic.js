@@ -90,6 +90,23 @@ var apiFunctions = {
     PartSuspended: " - 😠🤬👊",
     BusService: " - 🚌🚌🚌",
     SpecialService: " - 🤔🤔🤔"
+  },
+
+  logoColorObject: {
+    bakerloolist: "#894E25",
+    centrallist: "#DD2420",
+    circlelist: "#FFCE02",
+    districtlist: "#03722A",
+    handclist: "#D899AF",
+    jubileelist: "#697277",
+    metrolist: "#740F55",
+    northernlist: "#000000",
+    piccadillylist: "#0019A8",
+    victorialist: "#02A0E2",
+    wandclist: "#75D0BD",
+    dlrlist: "#00AFAD",
+    overgroundlist: "#E86911",
+    tflraillist: "#0019A8"
   }
 };
 
