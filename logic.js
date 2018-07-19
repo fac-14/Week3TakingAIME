@@ -45,7 +45,7 @@ var apiFunctions = {
       apiFunctions.sentimentObject[statusDescription.split(" ").join("")];
     // create url for GIPHY API request with sentiment search query
     let url =
-      "http://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" +
+      "https://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" +
       sentiment;
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
