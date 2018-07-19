@@ -31,10 +31,7 @@ justify-content: center;
 /* PADDING AND MARGIN */
 
 main {
-display: flex;
-justify-content: center;
-margin: 0;
-
+  margin: 0;
 }
 
 .input-form{
