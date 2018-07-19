@@ -11,7 +11,10 @@ document
     var value = line.options[line.selectedIndex].value;
     // get selected line's id
     var colorKey = line.options[line.selectedIndex].id;
+    // change the TFLphy logo color with it
     document.getElementById("tflphy-logo").style.fill = apiFunctions.logoColorObject[colorKey];
+    // change the background color with it
+    document.body.style.backgroundColor = apiFunctions.bgColorObject[colorKey];;
     // calls getLineStatus function
     apiFunctions.getLineStatus(value);
   });
