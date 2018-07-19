@@ -33,9 +33,74 @@ h1, h2, .header, .footer, #line-status, #input-gif {
 
 /* PADDING AND MARGIN */
 
-body {
+/* body {
   margin: 0;
   padding: 8% 8%;
+}
+*/
+
+.input-form{
+  margin: 4rem 16rem;
+
+}
+
+#bakerloo-list {
+background-color: #ae6118;
+}
+
+#central-list {
+background-color: #e41f1f;
+color: black;
+}
+
+#circle-list {
+background-color: #f8d42d;
+}
+
+#district-list {
+background-color: #00a575;
+}
+
+#handc-list {
+ background-color: #e899a8;
+}
+
+#jubilee-list {
+background-color: #8f989e;
+}
+
+#metro-list {
+background-color: #893267;
+}
+
+#northern-list {
+background-color: #000;
+}
+
+#piccadilly-list {
+background-color: #0450a1;
+}
+
+#victoria-list {
+background-color: #009fe0;
+}
+
+#wandc-list {
+background-color: #70c3ce;
+}
+
+#overground-list {
+background-color: #f86c00;
+}
+
+#dlr-list {
+background-color: #00bbb4;
+}
+
+#submit {
+height: 4rem;
+margin: 1rem 24rem;
+border-radius: 12px;
 }
 
 /* IMAGE STYLES */
@@ -49,3 +114,7 @@ body {
   justify-content: center;
 }
 
+footer {
+  margin: 4rem;
+  font-size: 1.2rem;
+}
