@@ -76,6 +76,7 @@ var apiFunctions = {
     SpecialService: "drew-scanlon"
   },
 
+  // emojis to append to line status
   emojiObject: {
     GoodService: " 🎉😍🎉",
     MinorDelays: " 🙄🙄🙄",
@@ -89,6 +90,7 @@ var apiFunctions = {
     SpecialService: " 🤔🤔🤔"
   },
 
+  // colors for logo and submit button changing
   logoColorObject: {
     bakerloolist: "#894E25",
     centrallist: "#DD2420",
@@ -104,10 +106,26 @@ var apiFunctions = {
     dlrlist: "#00AFAD",
     overgroundlist: "#E86911",
     tflraillist: "#0019A8"
+  },
+
+  // colors for changing background
+  bgColorObject: {
+    bakerloolist: "rgba(174, 97, 24, 0.1)",
+    centrallist: "rgba(228, 31, 31, 0.1)",
+    circlelist: "rgba(248, 212, 45, 0.1)",
+    districtlist: "rgba(0, 165, 117, 0.1)",
+    handclist: "rgba(232, 153, 168, 0.1)",
+    jubileelist: "rgba(143, 152, 158, 0.1)",
+    metrolist: "rgba(137, 50, 103, 0.1)",
+    northernlist: "rgba(0, 0, 0, 0.1)",
+    piccadillylist: "rgba(4, 80, 161, 0.1)",
+    victorialist: "rgba(0, 159, 224, 0.1)",
+    wandclist: "rgba(112, 195, 206, 0.1)",
+    dlrlist: "rgba(0, 187, 180, 0.1)",
+    overgroundlist: "rgba(248, 108, 0, 0.1)",
+    tflraillist: "rgba(4, 80, 161, 0.1)"
   }
 };
-
-// see top answer: https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function
 
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;

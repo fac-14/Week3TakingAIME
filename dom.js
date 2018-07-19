@@ -12,9 +12,9 @@ document
     // get selected line's id
     var colorKey = line.options[line.selectedIndex].id;
     var color = apiFunctions.logoColorObject[colorKey];
-    document.getElementById("tflphy-logo").style.fill =
-      apiFunctions.logoColorObject[colorKey];
+    document.getElementById("tflphy-logo").style.fill = color;
     document.querySelector(".submit").style.backgroundColor = color;
+    document.body.style.backgroundColor = apiFunctions.bgColorObject[colorKey];
     // calls getLineStatus function
     apiFunctions.getLineStatus(value);
   });
