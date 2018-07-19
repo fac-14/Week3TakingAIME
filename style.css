@@ -31,10 +31,7 @@ justify-content: center;
 /* PADDING AND MARGIN */
 
 main {
-display: flex;
-justify-content: center;
-margin: 0;
-
+  margin: 0;
 }
 
 .input-form{
@@ -44,56 +41,56 @@ margin: 4rem 16rem;
 
 }
 
-#bakerloo-list {
+#bakerloolist {
 background-color: #ae6118;
 }
 
-#central-list {
+#centrallist {
 background-color: #e41f1f;
 color: black;
 }
 
-#circle-list {
+#circlelist {
 background-color: #f8d42d;
 }
 
-#district-list {
+#districtlist {
 background-color: #00a575;
 }
 
-#handc-list {
+#handclist {
 background-color: #e899a8;
 }
 
-#jubilee-list {
+#jubileelist {
 background-color: #8f989e;
 }
 
-#metro-list {
+#metrolist {
 background-color: #893267;
 }
 
-#northern-list {
+#northernlist {
 background-color: #000;
 }
 
-#piccadilly-list {
+#piccadillylist {
 background-color: #0450a1;
 }
 
-#victoria-list {
+#victorialist {
 background-color: #009fe0;
 }
 
-#wandc-list {
+#wandclist {
 background-color: #70c3ce;
 }
 
-#overground-list {
+#overgroundlist {
 background-color: #f86c00;
 }
 
-#dlr-list {
+#dlrlist {
 background-color: #00bbb4;
 }
 
@@ -119,4 +116,12 @@ margin: 4rem;
 font-size: 1.2rem;
 }
 
+svg {
+  height: 200px;
+}
+
+#tflphy-logo {
+  color: #113B92;
+  fill: currentColor;
+}
 
