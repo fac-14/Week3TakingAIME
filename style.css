@@ -17,22 +17,31 @@ DLR rgb(0, 187, 180) #00BBB4
 
 /* FLEX BOX STYLES */
 
-body, .main, .input-form, .line-select, .api-updated {
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
+body,
+.main,
+.input-form,
+.line-select,
+.api-updated {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1, h2, .header, .footer, #line-status, #input-gif {
-display: flex;
-justify-content: center;
+h1,
+h2,
+.header,
+.footer,
+#line-status,
+#input-gif {
+  display: flex;
+  justify-content: center;
 }
 
 /* FONTS AND COLORS */
 
 body {
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-weight: 400;
   font-size: 2rem;
 }
@@ -46,34 +55,38 @@ h3 {
 }
 
 form > * {
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 1rem;
 }
 
 select:focus {
-  outline-color: #113B92 !important;
+  outline: none !important;
 }
 
-input[type=submit] {
+input[type="submit"] {
   font-family: inherit;
   font-weight: 700;
   font-size: 1rem;
   color: white;
-  background-color: #113B92;
+  background-color: #113b92;
   border-radius: 4px;
 }
 
-input[type=submit]:focus {
-  outline-color: #113B92 !important;
+input[type="submit"]:focus {
+  outline: none !important;
+  box-shadow: none;
 }
 
 /* PADDING AND MARGIN */
 
-body, main {
+body,
+main {
   margin: 0;
 }
 
-header, select, input {
+header,
+select,
+input {
   margin: 8px 0px;
   width: 24rem;
 }
@@ -83,7 +96,7 @@ h2 {
   margin: 24px 0px;
 }
 
-.input-form{
+.input-form {
   margin: 8px 0px;
 }
 
@@ -93,9 +106,9 @@ h2 {
 }
 
 #submit {
-height: 4rem;
-margin: 1rem 24rem;
-border-radius: 12px;
+  height: 4rem;
+  margin: 1rem 24rem;
+  border-radius: 12px;
 }
 
 /* IMAGE STYLES */
@@ -106,21 +119,19 @@ img {
 }
 
 .hidden-img {
-display: none;
+  display: none;
 }
 
 .reveal-img {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-
 
 svg {
   height: 128px;
 }
 
 #tflphy-logo {
-  color: #113B92;
+  color: #113b92;
   fill: currentColor;
 }
-
