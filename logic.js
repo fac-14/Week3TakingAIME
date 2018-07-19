@@ -78,6 +78,7 @@ var apiFunctions = {
     SpecialService: "drew-scanlon"
   },
 
+  // emojis to append to line status
   emojiObject: {
     GoodService: " - woohoo! 🎉😍🎉",
     MinorDelays: " - 🙄🙄🙄",
@@ -91,6 +92,7 @@ var apiFunctions = {
     SpecialService: " - 🤔🤔🤔"
   },
 
+  // colors for logo and submit button changing
   logoColorObject: {
     bakerloolist: "#894E25",
     centrallist: "#DD2420",
@@ -107,31 +109,15 @@ var apiFunctions = {
     overgroundlist: "#E86911",
     tflraillist: "#0019A8"
   },
-
-  /*
-TUBE LINE COLOURS!
-Bakerloo rgb(174, 97, 24) #AE6118
-Central rgb(228, 31, 31) #E41F1F
-Circle rgb(248, 212, 45) #F8D42D
-District rgb(0, 165, 117) #00A575
-H&C rgb(232, 153, 168) #E899A8
-Jubilee rgb(143, 152, 158) #8F989E
-Metro rgb(137, 50, 103) #893267
-Northern rgb(0, 0, 0) #000000
-Piccadilly rgb(4, 80, 161) #0450A1
-Victoria rgb(0, 159, 224) #009FE0
-W&C rgb(112, 195, 206) #70C3CE
-Overground rgb(248, 108, 0) #F86C00
-DLR rgb(0, 187, 180) #00BBB4
-*/
   
+  // colors for changing background
   bgColorObject: {
     bakerloolist: "rgba(174, 97, 24, 0.1)",
     centrallist: "rgba(228, 31, 31, 0.1)",
     circlelist: "rgba(248, 212, 45, 0.1)",
     districtlist: "rgba(0, 165, 117, 0.1)",
     handclist: "rgba(232, 153, 168, 0.1)",
-    jubileelist: "rgba(143, 152, 158)",
+    jubileelist: "rgba(143, 152, 158, 0.1)",
     metrolist: "rgba(137, 50, 103, 0.1)",
     northernlist: "rgba(0, 0, 0, 0.1)",
     piccadillylist: "rgba(4, 80, 161, 0.1)",
@@ -143,12 +129,6 @@ DLR rgb(0, 187, 180) #00BBB4
   }
 };
 
-// see top answer: https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function
-
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
 }
-
-// change background color depending on tube line
-//
-// console.log(document.getElementById("bakerloo-list").textContent);
