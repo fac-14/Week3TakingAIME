@@ -15,7 +15,6 @@ document
     document.getElementById("tflphy-logo").style.fill =
       apiFunctions.logoColorObject[colorKey];
     document.querySelector(".submit").style.backgroundColor = color;
-    // setAttribute("background-color:" + color);
     // calls getLineStatus function
     apiFunctions.getLineStatus(value);
   });

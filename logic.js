@@ -28,15 +28,12 @@ var apiFunctions = {
           // line status variable
           var lineStatus = line.lineStatuses[0].statusSeverityDescription;
           // puts line status text into DOM
-          document.getElementById("line-status-text").textContent =
-            lineStatus + " on " + lineName;
-          console.log(lineStatus);
+          document.getElementById("line-status-text").innerHTML =
+            lineStatus + " on<br>" + lineName;
           // append emoji text
           apiFunctions.getEmoji(lineStatus);
           // get appropriate gif
-          return apiFunctions.getGif(
-            lineStatus
-          );
+          return apiFunctions.getGif(lineStatus);
         }
       });
     });
@@ -48,20 +45,21 @@ var apiFunctions = {
       apiFunctions.sentimentObject[statusDescription.split(" ").join("")];
     // create url for GIPHY API request with sentiment search query
     let url =
-      "http://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" + sentiment;
+      "http://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" +
+      sentiment;
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
       document.getElementById("giphy-gif").src =
         parsedObj.data.images.fixed_height.url;
-        // parsedObj.data[0].images.downsized.url; 
       document.getElementById("giphy-gif").classList.remove("hidden-img");
       document.getElementById("giphy-gif").classList.add("reveal-img");
     });
   },
 
   getEmoji: function(statusDescription) {
-    let sentiment = apiFunctions.emojiObject[statusDescription.split(" ").join("")];
-    document.getElementById("line-status-text").textContent += sentiment;
+    let sentiment =
+      apiFunctions.emojiObject[statusDescription.split(" ").join("")];
+    document.getElementById("line-status-text").innerHTML += sentiment;
   },
 
   // convert TfL status descriptions into search terms for GIPHY
@@ -79,16 +77,16 @@ var apiFunctions = {
   },
 
   emojiObject: {
-    GoodService: " - woohoo! 🎉😍🎉",
-    MinorDelays: " - 🙄🙄🙄",
-    ReducedService: " - 🤨🤨🤨",
-    PlannedClosure: " - 😩😫😖",
-    PartClosure: " - 😩😫😖",
-    SevereDelays: " - 😬😡😭",
-    Suspended: " - 😠🤬👊",
-    PartSuspended: " - 😠🤬👊",
-    BusService: " - 🚌🚌🚌",
-    SpecialService: " - 🤔🤔🤔"
+    GoodService: " 🎉😍🎉",
+    MinorDelays: " 🙄🙄🙄",
+    ReducedService: " 🤨🤨🤨",
+    PlannedClosure: " 😩😫😖",
+    PartClosure: " 😩😫😖",
+    SevereDelays: " 😬😡😭",
+    Suspended: " 😠🤬👊",
+    PartSuspended: " 😠🤬👊",
+    BusService: " 🚌🚌🚌",
+    SpecialService: " 🤔🤔🤔"
   },
 
   logoColorObject: {
@@ -114,7 +112,3 @@ var apiFunctions = {
 if (typeof module !== "undefined") {
   module.exports = apiFunctions;
 }
-
-// change background color depending on tube line
-//
-// console.log(document.getElementById("bakerloo-list").textContent);
