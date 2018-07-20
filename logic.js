@@ -25,7 +25,7 @@ var apiFunctions = {
     
     var line = document.getElementById('tube-lines');
     var value = line.options[line.selectedIndex].value;
-    let url =
+    var url =
       "https://api.tfl.gov.uk/line/" + value + "/status?details=false";
     // make API request to TfL
     apiFunctions.apiRequest(url, function(parsedObj) {
