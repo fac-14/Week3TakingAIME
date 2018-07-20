@@ -18,7 +18,7 @@ var apiFunctions = {
   // get tube line status using API request
   getLineStatus: function(lineName) {
     // store url for TfL API request
-    let url =
+    var url =
       "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status";
     // make API request to TfL
     apiFunctions.apiRequest(url, function(parsedObj) {
@@ -41,10 +41,10 @@ var apiFunctions = {
 
   getGif: function(statusDescription) {
     // parse TfL status description into sentimentObject key
-    let sentiment =
+    var sentiment =
       apiFunctions.sentimentObject[statusDescription.split(" ").join("")];
     // create url for GIPHY API request with sentiment search query
-    let url =
+    var url =
       "https://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" +
       sentiment;
     // make API request to GIPHY
@@ -57,7 +57,7 @@ var apiFunctions = {
   },
 
   getEmoji: function(statusDescription) {
-    let sentiment =
+    var sentiment =
       apiFunctions.emojiObject[statusDescription.split(" ").join("")];
     document.getElementById("line-status-text").innerHTML += sentiment;
   },
