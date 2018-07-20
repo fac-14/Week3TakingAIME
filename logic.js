@@ -92,20 +92,20 @@ var apiFunctions = {
 
   // colors for logo and submit button changing
   logoColorObject: {
-    bakerloolist: "#894E25",
-    centrallist: "#DD2420",
-    circlelist: "#FFCE02",
-    districtlist: "#03722A",
-    handclist: "#D899AF",
-    jubileelist: "#697277",
-    metrolist: "#740F55",
-    northernlist: "#000000",
-    piccadillylist: "#0019A8",
-    victorialist: "#02A0E2",
-    wandclist: "#75D0BD",
-    dlrlist: "#00AFAD",
-    overgroundlist: "#E86911",
-    tflraillist: "#0019A8"
+    bakerloolist: "rgba(174, 97, 24, 1.0)",
+    centrallist: "rgba(228, 31, 31, 1.0)",
+    circlelist: "rgba(248, 212, 45, 1.0)",
+    districtlist: "rgba(0, 165, 117, 1.0)",
+    handclist: "rgba(232, 153, 168, 1.0)",
+    jubileelist: "rgba(143, 152, 158, 1.0)",
+    metrolist: "rgba(137, 50, 103, 1.0)",
+    northernlist: "rgba(0, 0, 0, 1.0)",
+    piccadillylist: "rgba(4, 80, 161, 1.0)",
+    victorialist: "rgba(0, 159, 224, 1.0)",
+    wandclist: "rgba(112, 195, 206, 1.0)",
+    dlrlist: "rgba(0, 187, 180, 1.0)",
+    overgroundlist: "rgba(248, 108, 0, 1.0)",
+    tflraillist: "rgba(4, 80, 161, 1.0)"
   },
 
   // colors for changing background
