@@ -9,6 +9,7 @@ document
     event.preventDefault();
     var line = document.getElementById("tube-lines");
     var value = line.options[line.selectedIndex].value;
+    console.log(value);
     // get selected line's id
     var colorKey = line.options[line.selectedIndex].id;
     var color = apiFunctions.logoColorObject[colorKey];

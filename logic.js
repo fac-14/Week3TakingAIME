@@ -18,23 +18,25 @@ var apiFunctions = {
   // get tube line status using API request
   getLineStatus: function(lineName) {
     // store url for TfL API request
+    
+    var line = document.getElementById('tube-lines');
+    var value = line.options[line.selectedIndex].value;
     let url =
-      "https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status";
+      "https://api.tfl.gov.uk/line/" + value + "/status?details=false";
     // make API request to TfL
     apiFunctions.apiRequest(url, function(parsedObj) {
-      parsedObj.forEach(function(line) {
-        // find the tube line chosen by the user
-        if (line.name === lineName) {
+        parsedObj.forEach(function(line) {
           // line status variable
           var lineStatus = line.lineStatuses[0].statusSeverityDescription;
-          // puts line status text into DOM
+      //     // puts line status text into DOM
+          console.log(url);
           document.getElementById("line-status-text").innerHTML =
             lineStatus + " on<br>" + lineName;
           // append emoji text
           apiFunctions.getEmoji(lineStatus);
           // get appropriate gif
           return apiFunctions.getGif(lineStatus);
-        }
+        // }
       });
     });
   },
