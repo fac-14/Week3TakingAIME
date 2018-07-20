@@ -10,6 +10,10 @@ var apiFunctions = {
         // run callback function after response received
         return callback(parsedObj);
       }
+      // Display error message if API request is unsuccessful
+      else if (xhr.readyState == 4 && xhr.status != 200){
+        document.getElementById("error").textContent = 'Unable to load data :(';
+      }
     };
     xhr.open("GET", url, true);
     xhr.send();
@@ -49,6 +53,8 @@ var apiFunctions = {
       sentiment;
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
+      // Remove error message upon successful API request
+      document.getElementById("error").textContent = "";
       document.getElementById("giphy-gif").src =
         parsedObj.data.images.fixed_height.url;
       document.getElementById("giphy-gif").classList.remove("hidden-img");
