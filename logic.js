@@ -75,7 +75,7 @@ var apiFunctions = {
     Suspended: "impatient",
     PartSuspended: "impatient",
     BusService: "bus",
-    SpecialService: "drew-scanlon"
+    SpecialService: "nah"
   },
 
   // emojis to append to line status
