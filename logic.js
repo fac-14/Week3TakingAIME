@@ -10,6 +10,10 @@ var apiFunctions = {
         // run callback function after response received
         return callback(parsedObj);
       }
+      // Display error message if API request is unsuccessful
+      else if (xhr.readyState == 4 && xhr.status != 200){
+        document.getElementById("error").textContent = 'Unable to load data :(';
+      }
     };
     xhr.open("GET", url, true);
     xhr.send();
@@ -43,14 +47,16 @@ var apiFunctions = {
 
   getGif: function(statusDescription) {
     // parse TfL status description into sentimentObject key
-    let sentiment =
+    var sentiment =
       apiFunctions.sentimentObject[statusDescription.split(" ").join("")];
     // create url for GIPHY API request with sentiment search query
-    let url =
+    var url =
       "https://api.giphy.com/v1/gifs/random?&api_key=dc6zaTOxFJmzC&tag=" +
       sentiment;
     // make API request to GIPHY
     apiFunctions.apiRequest(url, function(parsedObj) {
+      // Remove error message upon successful API request
+      document.getElementById("error").textContent = "";
       document.getElementById("giphy-gif").src =
         parsedObj.data.images.fixed_height.url;
       document.getElementById("giphy-gif").classList.remove("hidden-img");
@@ -59,7 +65,7 @@ var apiFunctions = {
   },
 
   getEmoji: function(statusDescription) {
-    let sentiment =
+    var sentiment =
       apiFunctions.emojiObject[statusDescription.split(" ").join("")];
     document.getElementById("line-status-text").innerHTML += sentiment;
   },

@@ -96,13 +96,12 @@ input[type="submit"] {
   border-radius: 4px;
 }
 
-select:focus {
-  outline: none !important;
-}
+/* select:focus {
+  
+} */
 
 input[type="submit"]:focus {
-  outline: none !important;
-  box-shadow: none;
+   box-shadow: none;
 }
 
 .hidden-img {
@@ -115,6 +114,10 @@ input[type="submit"]:focus {
   justify-content: center;
 }
 
+#error {
+  text-align: center;
+  font-size: 1.75rem;
+}
 /* END BODY STYLING */
 
 /* START FOOTER STYLING */
@@ -151,6 +154,10 @@ p {
   #input-gif > img {
     max-width: 90vw;
   }
+  #error {
+   font-size: 1.25rem;
+  }
+  /* 
 }
 
 /* END EMDIA QUERIES */
