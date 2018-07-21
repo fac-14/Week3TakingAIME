@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
   <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
 </head>
-
 <body>
   <header>
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.000000 400.000000" preserveAspectRatio="xMidYMid meet">
@@ -61,44 +59,39 @@
       </svg>
 
   </header>
-
   <main>
     <h2>Choose a tube line:</h2>
-      <form class="line-select" id="line-select" action="">
-        <select id="tube-lines" name="tube-lines" required>
-          <option value="">--</option>
-          <option value="bakerloo">Bakerloo</option>
-          <option value="central">Central</option>
-          <option value="circle">Circle</option>
-          <option value="district">District</option>
-          <option value="hammersmith-city">Hammersmith & City</option>
-          <option value="jubilee">Jubilee</option>
-          <option value="metropolitan">Metropolitan</option>
-          <option value="northern">Northern</option>
-          <option value="piccadilly">Piccadilly</option>
-          <option value="victoria">Victoria</option>
-          <option value="waterloo-city">Waterloo & City</option>
-          <option value="london-overground">Overground</option>
-          <option value="dlr">DLR</option>
-          <option value="tfl-rail">TfL Rail</option>
-        </select>
-        <input type="submit" name="" value="Submit!" class="submit">
-      </form>
-    <div class="line-status">
+    <form id="line-select" action="">
+      <select id="tube-lines" name="tube-lines" required>
+        <option value="">--</option>
+        <option value="bakerloo">Bakerloo</option>
+        <option value="central">Central</option>
+        <option value="circle">Circle</option>
+        <option value="district">District</option>
+        <option value="hammersmith-city">Hammersmith & City</option>
+        <option value="jubilee">Jubilee</option>
+        <option value="metropolitan">Metropolitan</option>
+        <option value="northern">Northern</option>
+        <option value="piccadilly">Piccadilly</option>
+        <option value="victoria">Victoria</option>
+        <option value="waterloo-city">Waterloo & City</option>
+        <option value="london-overground">Overground</option>
+        <option value="dlr">DLR</option>
+        <option value="tfl-rail">TfL Rail</option>
+      </select>
+      <input type="submit" name="" value="Submit!" class="submit">
+    </form>
+    <div>
       <h3 id="line-status-text"></h3>
-      <img src="" alt="A GIF related to the tube status" id="giphy-gif" class="hidden-img">
-      <div id="error"></div>
+      <img src="" alt="A GIF related to the tube status" id="giphy-gif" class="hidden">
+      <div id="error" class="hidden">Unable to load data :(</div>
     </div>
   </main>
-
   <footer>
     <p>Made with the blood, sweat, and tears of Eve, Art, Emily, and Kate</p>
   </footer>
-
   <script src="./dom.js"></script>
   <script src="./logic.js"></script>
   <script src="./convert.js"></script>
-
 </body>
-
 </html>

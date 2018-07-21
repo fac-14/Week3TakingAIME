@@ -13,12 +13,12 @@ inputForm.addEventListener("submit", function(event) {
   getLineStatus(lineName);
 });
 
-function displayError() {
-  error.textContent = "Unable to load data :(";
+function showError() {
+  error.classList.remove("hidden");
 }
 
-function removeError() {
-  error.textContent = "";
+function hideError() {
+  error.classList.add("hidden");
 }
 
 function changeColors(lineName) {
@@ -30,13 +30,13 @@ function changeColors(lineName) {
 }
 
 function renderLineStatus(lineStatus, lineName) {
-  removeError();
+  hideError();
   var emoji = getValue("emoji", removeWhitespace(lineStatus));
   statusText.innerHTML = lineStatus + " on<br>" + lineName + emoji;
 }
 
 function renderGif(gifObj) {
-  removeError();
+  hideError();
   gif.src = gifObj.data.images.fixed_height.url;
-  gif.classList.remove("hidden-img");
+  gif.classList.remove("hidden");
 }

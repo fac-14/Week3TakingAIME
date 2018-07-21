@@ -6,7 +6,7 @@ function apiRequest(url, callback) {
         var parsedObj = JSON.parse(xhr.responseText);
         return callback(parsedObj);
       } else {
-        displayError();
+        showError();
       }
     }
   };
