@@ -39,5 +39,4 @@ function renderGif(gifObj) {
   removeError();
   gif.src = gifObj.data.images.fixed_height.url;
   gif.classList.remove("hidden-img");
-  gif.classList.add("reveal-img");
 }

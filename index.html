@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header>
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.000000 400.000000" preserveAspectRatio="xMidYMid meet">
       <g id="tflphy-logo" transform="translate(0.000000,400.000000) scale(0.100000,-0.100000)"
       fill="#000000" stroke="none">
@@ -64,28 +64,26 @@
 
   <main>
     <h2>Choose a tube line</h2>
-    <div class="input-form">
       <form class="line-select" id="line-select" action="">
           <select id="tube-lines" name="tube-lines" required>
-            <option value="" id="default">--</option>
-            <option value="bakerloo" id="bakerloo">Bakerloo</option>
-            <option value="central" id="central">Central</option>
-            <option value="circle" id="circle">Circle</option>
-            <option value="district" id="district">District</option>
+            <option value="">--</option>
+            <option value="bakerloo">Bakerloo</option>
+            <option value="central">Central</option>
+            <option value="circle">Circle</option>
+            <option value="district">District</option>
             <option value="hammersmith-city">Hammersmith & City</option>
-            <option value="jubilee" id="jubilee">Jubilee</option>
-            <option value="metropolitan" id="metro">Metropolitan</option>
-            <option value="northern" id="northern">Northern</option>
-            <option value="piccadilly" id="piccadilly">Piccadilly</option>
-            <option value="victoria" id="victoria">Victoria</option>
-            <option value="waterloo-city" id="wandc">Waterloo & City</option>
-            <option value="london-overground" id="overgroundlist">Overground</option>
-            <option value="dlr" id="dlrlist">DLR</option>
-            <option value="tfl-rail" id="tflraillist">TfL Rail</option>
+            <option value="jubilee">Jubilee</option>
+            <option value="metropolitan">Metropolitan</option>
+            <option value="northern">Northern</option>
+            <option value="piccadilly">Piccadilly</option>
+            <option value="victoria">Victoria</option>
+            <option value="waterloo-city">Waterloo & City</option>
+            <option value="london-overground">Overground</option>
+            <option value="dlr">DLR</option>
+            <option value="tfl-rail">TfL Rail</option>
           </select>
           <input type="submit" name="" value="Submit!" class="submit">
       </form>
-    </div>
     <div class="api-updated">
       <h3 id="line-status-text"></h3>
       <div id="input-gif">
@@ -95,7 +93,7 @@
     </div>
   </main>
 
-  <footer class="footer">
+  <footer>
     <p>Made with the blood, sweat, and tears of Eve, Art, Emily, and Kate</p>
   </footer>
 

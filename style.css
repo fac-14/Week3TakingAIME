@@ -1,34 +1,15 @@
-/*
-TUBE LINE COLOURS!
-Bakerloo rgba(174, 97, 24) #AE6118
-Central rgba(228, 31, 31) #E41F1F
-Circle rgba(248, 212, 45) #F8D42D
-District rgba(0, 165, 117) #00A575
-H&C rgba(232, 153, 168) #E899A8
-Jubilee rgba(143, 152, 158) #8F989E
-Metro rgba(137, 50, 103) #893267
-Northern rgba(0, 0, 0) #000000
-Piccadilly rgba(4, 80, 161) #0450A1
-Victoria rgba(0, 159, 224) #009FE0
-W&C rgba(112, 195, 206) #70C3CE
-Overground rgba(248, 108, 0) #F86C00
-DLR rgba(0, 187, 180) #00BBB4
-*/
-
 body {
   font-family: "Oxygen", sans-serif;
   font-weight: 400;
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  text-align: center;
 }
 
 body,
-.main,
-.input-form,
-.line-select,
-.api-update,
-.header,
-.footer,
+form,
+header,
 #line-status,
 #input-gif {
   display: flex;
@@ -36,15 +17,10 @@ body,
   align-items: center;
 }
 
-body,
-main {
-  margin: 0;
-}
-
 /* START HEADER STYLING */
 
 header {
-  margin: 24px 0px;
+  margin: 24px 0 16px 0;
   width: 24rem;
 }
 
@@ -53,7 +29,7 @@ svg {
 }
 
 #tflphy-logo {
-  color: rgba(17, 59, 146, 1.0);
+  color: rgba(17, 59, 146, 1);
   fill: currentColor;
 }
 
@@ -62,7 +38,6 @@ svg {
 /* START BODY STYLING */
 
 h2 {
-  text-align: center;
   font-weight: 700;
   margin: 0 0 16px 0;
   padding: 0 32px;
@@ -71,18 +46,13 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
-  text-align: center;
   margin: 16px 32px;
-  /* padding: 0 8rem; */
 }
 
 select,
 input {
   margin: 8px 0px;
   width: 24rem;
-}
-
-form > * {
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
 }
@@ -92,84 +62,20 @@ input[type="submit"] {
   font-weight: 700;
   font-size: 1rem;
   color: white;
-  background-color: rgba(17, 59, 146, 1.0);
+  background-color: rgba(17, 59, 146, 1);
   border-radius: 4px;
 }
 
 /* select:focus {
-  
+  find way to change outline colour to line colour
 } */
 
 input[type="submit"]:focus {
-   box-shadow: none;
+  box-shadow: none;
 }
-
-/* style dropdown-list options */
-#bakerloolist {
-  background-color: #ae6118;
-  }
-  
-  #centrallist {
-  background-color: #e41f1f;
-  color: black;
-  }
-  
-  #circlelist {
-  background-color: #f8d42d;
-  }
-  
-  #districtlist {
-  background-color: #00a575;
-  }
-  
-  #handclist {
-   background-color: #e899a8;
-  }
-  
-  #jubileelist {
-  background-color: #8f989e;
-  }
-  
-  #metrolist {
-  background-color: #893267;
-  }
-  
-  #northernlist {
-  background-color: #000;
-  }
-  
-  #piccadillylist {
-  background-color: #0450a1;
-  }
-  
-  #victorialist {
-  background-color: #009fe0;
-  }
-  
-  #wandclist {
-  background-color: #70c3ce;
-  }
-  
-  #overgroundlist {
-  background-color: #f86c00;
-  }
-
-  #dlrlist {
-    background-color: #00AFAD;
-  }
-    
-  #tflraillist {
-    background-color: #0019A8;
-  }
 
 .hidden-img {
   display: none;
-}
-
-.reveal-img {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 #error {
@@ -182,7 +88,7 @@ input[type="submit"]:focus {
 
 footer {
   font-size: 0.75rem;
-  margin: 24px 32px;
+  margin: 24px 32px 16px 32px;
   text-align: center;
 }
 
@@ -212,10 +118,10 @@ p {
   #input-gif > img {
     max-width: 90vw;
   }
+
   #error {
-   font-size: 1.25rem;
+    font-size: 1.25rem;
   }
-  /* 
 }
 
-/* END EMDIA QUERIES */
+/* END MEDIA QUERIES */
