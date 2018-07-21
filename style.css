@@ -10,8 +10,7 @@ body {
 body,
 form,
 header,
-#line-status,
-#input-gif {
+#line-status {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,8 +28,7 @@ svg {
 }
 
 #tflphy-logo {
-  color: rgba(17, 59, 146, 1);
-  fill: currentColor;
+  fill: rgba(17, 59, 146, 1);
 }
 
 /* END HEADER STYLING */
@@ -115,7 +113,7 @@ p {
     font-size: 1.25rem;
   }
 
-  #input-gif > img {
+  img {
     max-width: 90vw;
   }
 
