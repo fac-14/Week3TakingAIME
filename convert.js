@@ -1,4 +1,8 @@
 const convert = {
+  getValue: function(object, key) {
+    return convert[object][key];
+  },
+
   sentiment: {
     GoodService: "happy-dancing",
     MinorDelays: "whatever",
@@ -59,7 +63,3 @@ const convert = {
     ["tfl-rail"]: "rgba(4, 80, 161, 0.1)"
   }
 };
-
-function getValue(object, key) {
-  return convert[object][key];
-}

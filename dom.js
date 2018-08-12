@@ -9,34 +9,36 @@ var gif = document.getElementById("giphy-gif");
 inputForm.addEventListener("submit", function(event) {
   event.preventDefault();
   var lineName = tubeList.options[tubeList.selectedIndex].value;
-  changeColors(lineName);
-  getLineStatus(lineName);
+  dom.changeColors(lineName);
+  logic.getLineStatus(lineName);
 });
 
-function showError() {
-  error.classList.remove("hidden");
-}
+var dom = {
+  changeColors: function(lineName) {
+    var lineColor = convert.getValue("logoColor", lineName);
+    var backgroundColor = convert.getValue("backgroundColor", lineName);
+    logo.style.fill = lineColor;
+    submitButton.style.backgroundColor = lineColor;
+    document.body.style.backgroundColor = backgroundColor;
+  },
 
-function hideError() {
-  error.classList.add("hidden");
-}
+  renderLineStatus: function(lineStatus, lineName) {
+    dom.hideError();
+    var emoji = convert.getValue("emoji", logic.removeWhitespace(lineStatus));
+    statusText.innerHTML = lineStatus + " on<br>" + lineName + emoji;
+  },
 
-function changeColors(lineName) {
-  var lineColor = getValue("logoColor", lineName);
-  var backgroundColor = getValue("backgroundColor", lineName);
-  logo.style.fill = lineColor;
-  submitButton.style.backgroundColor = lineColor;
-  document.body.style.backgroundColor = backgroundColor;
-}
+  renderGif: function(gifObj) {
+    dom.hideError();
+    gif.src = gifObj.data.images.fixed_height.url;
+    gif.classList.remove("hidden");
+  },
 
-function renderLineStatus(lineStatus, lineName) {
-  hideError();
-  var emoji = getValue("emoji", removeWhitespace(lineStatus));
-  statusText.innerHTML = lineStatus + " on<br>" + lineName + emoji;
-}
+  showError: function() {
+    error.classList.remove("hidden");
+  },
 
-function renderGif(gifObj) {
-  hideError();
-  gif.src = gifObj.data.images.fixed_height.url;
-  gif.classList.remove("hidden");
-}
+  hideError: function() {
+    error.classList.add("hidden");
+  }
+};
