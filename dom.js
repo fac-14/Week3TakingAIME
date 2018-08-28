@@ -1,14 +1,14 @@
 var inputForm = document.getElementById("line-select");
-var tubeList = document.getElementById("tube-lines");
+var inputList = document.getElementById("tube-lines");
 var logo = document.getElementById("tflphy-logo");
-var submitButton = document.querySelector(".submit");
+var submitBtn = document.querySelector(".submit");
 var statusText = document.getElementById("line-status-text");
-var error = document.getElementById("error");
+var errorMsg = document.getElementById("error");
 var gif = document.getElementById("giphy-gif");
 
 inputForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  var lineName = tubeList.options[tubeList.selectedIndex].value;
+  var lineName = inputList.options[inputList.selectedIndex].value;
   dom.changeColors(lineName);
   logic.getLineStatus(lineName);
 });
@@ -18,7 +18,7 @@ var dom = {
     var lineColor = convert.getValue("logoColor", lineName);
     var backgroundColor = convert.getValue("backgroundColor", lineName);
     logo.style.fill = lineColor;
-    submitButton.style.backgroundColor = lineColor;
+    submitBtn.style.backgroundColor = lineColor;
     document.body.style.backgroundColor = backgroundColor;
   },
 
@@ -35,10 +35,10 @@ var dom = {
   },
 
   showError: function() {
-    error.classList.remove("hidden");
+    errorMsg.classList.remove("hidden");
   },
 
   hideError: function() {
-    error.classList.add("hidden");
+    errorMsg.classList.add("hidden");
   }
 };
