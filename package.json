@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fac-14/Week3TakingAIME.git"
+    "url": "git+https://github.com/sima-qian/TFLPHY.git"
   },
   "author": "Eve, Kate, Emily, Art",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fac-14/Week3TakingAIME/issues"
+    "url": "https://github.com/sima-qian/TFLPHY/issues"
   },
-  "homepage": "https://github.com/fac-14/Week3TakingAIME#readme",
+  "homepage": "https://github.com/sima-qian/TFLPHY#readme",
   "dependencies": {
     "nodemon": "^1.18.2",
     "nyc": "^12.0.2",
